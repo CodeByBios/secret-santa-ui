@@ -11,9 +11,18 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Roboto', 'Montserrat', sans-serif;
   background: #f7f7f7;
   color: #111;
+}
+
+nav.navbar,
+#participants-title {
+  font-family: 'Great Vibes', cursive;
+}
+
+button {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 a {
