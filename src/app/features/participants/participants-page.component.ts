@@ -10,7 +10,7 @@ import { ParticipantFormCoupleComponent } from './participant-form-couple.compon
   imports: [ParticipantTagComponent, ParticipantFormSingleComponent, ParticipantFormCoupleComponent],
   template: `
     <section aria-labelledby="participants-title">
-      <h1 id="participants-title">Participants</h1>
+      <h1 id="participants-title">Participants ({{participants().length}})</h1>
 
       <div class="actions" role="group" aria-label="Actions">
         <button type="button" class="btn" (click)="openSingle()">Ajouter un célibataire</button>
