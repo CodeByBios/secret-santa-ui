@@ -32,5 +32,6 @@ export class DrawService {
 
   async reset(): Promise<void> {
     await this.http.delete(`${this.base}`).toPromise();
+    this.lastDrawId.set(null);
   }
 }
