@@ -53,7 +53,7 @@ export class DrawPageComponent {
       await this.svc.create();
       this.status.set('Tirage effectué ✔️');
     } catch (e) {
-      this.status.set((e as Error).message);
+      this.status.set('Tirage non effectué, verifiez la liste des participants ❌');
     }
   }
 
