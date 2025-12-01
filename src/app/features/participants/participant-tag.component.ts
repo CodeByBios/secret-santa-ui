@@ -68,7 +68,7 @@ type ParticipantView = {
       transition: all 0.5s ease;
     }
     .tag.collapsed {
-      max-height: 120px;
+      max-height: 200px;
     }
     .tag.expanded {
       max-height: 500px;
