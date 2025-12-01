@@ -21,10 +21,10 @@ import { RouterLink } from '@angular/router';
 
       @if (assignments().length > 0) {
         <details>
-          <summary>Voir les affectations (debug)</summary>
+          <summary>Affectations (Tirage)</summary>
           <ul>
             @for (a of assignments(); track a.id) {
-              <li>{{a.giver.fullName}} -> {{a.recipient.fullName}} ({{a.recipient.giftIdea}})</li>
+              <li>{{a.giver.fullName}} -> 🔒🔒🔒🔒🔒</li>
             }
           </ul>
         </details>

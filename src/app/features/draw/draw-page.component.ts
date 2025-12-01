@@ -24,7 +24,8 @@ import { DrawService } from '../../core/services/draw.service';
             @for (a of assignments(); track a.id) {
               <tr>
                 <td>{{a.giver.fullName}}</td>
-                <td>{{a.recipient.fullName}} — {{a.recipient.giftIdea}}</td>
+                <td>🔒🔒🔒🔒🔒🔒🔒🔒🔒🔒</td>
+                <!-- <td>{{a.recipient.fullName}} — {{a.recipient.giftIdea}}</td> -->
               </tr>
             }
           </tbody>
