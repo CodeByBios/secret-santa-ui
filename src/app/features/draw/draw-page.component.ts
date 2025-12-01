@@ -7,9 +7,10 @@ import { DrawService } from '../../core/services/draw.service';
   template: `
     <section aria-labelledby="draw-title">
       <h1 id="draw-title">Lancer le tirage</h1>
-      <p>Condition: ne pas mettre 2 personnes en couple ensemble.</p>
+      <p>Deux personnes en couple ne peuvent pas être associées lors du tirage.</p>
       <div role="group" aria-label="Actions">
         <button type="button" class="btn primary" (click)="doDraw()">Lancer le tirage</button>
+        <button type="button" class="btn ms-2" (click)="reset()">Réinitialiser</button>
       </div>
 
       @if (status()) { <p class="status" aria-live="polite">{{status()}}</p> }
@@ -50,6 +51,16 @@ export class DrawPageComponent {
     try {
       await this.svc.create();
       this.status.set('Tirage effectué ✔️');
+    } catch (e) {
+      this.status.set((e as Error).message);
+    }
+  }
+
+  async reset(): Promise<void> {
+    this.status.set('Réinitialisation des tirages en cours...');
+    try {
+      await this.svc.reset();
+      this.status.set('Réinitialisation des tirages effectuée ✔️');
     } catch (e) {
       this.status.set((e as Error).message);
     }

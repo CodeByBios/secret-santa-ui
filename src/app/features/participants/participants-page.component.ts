@@ -85,7 +85,7 @@ export class ParticipantsPageComponent implements OnInit {
 
   async onSingleSubmitted(data: Pick<Participant, 'fullName' | 'email' | 'giftIdea'>): Promise<void> {
     await this.svc.addSingle(data);
-    this.status.set('Participant ajouté.');
+    this.status.set('Participant ajouté ✔️');
     this.addingSingle.set(false);
   }
 
@@ -96,8 +96,13 @@ export class ParticipantsPageComponent implements OnInit {
   }
 
   async remove(id: string): Promise<void> {
-    await this.svc.remove(id);
-    this.status.set('Participant supprimé.');
+    try {
+      await this.svc.remove(id);
+      this.status.set('Participant supprimé ✔️');
+    } catch (e) {
+      this.status.set('Tirage déja effectué, réinitialisez ❌');
+      console.error((e as Error).message);
+    }
   }
 
   async edit(id: string, data: Pick<Participant, 'fullName' | 'email' | 'giftIdea'>): Promise<void> {

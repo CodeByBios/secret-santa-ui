@@ -29,4 +29,8 @@ export class DrawService {
     const data = await this.http.get<AssignmentView[]>(`${this.base}/${drawId}`).toPromise();
     this.assignments.set(data ?? []);
   }
+
+  async reset(): Promise<void> {
+    await this.http.delete(`${this.base}`).toPromise();
+  }
 }
