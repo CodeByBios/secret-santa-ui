@@ -1,8 +1,7 @@
-import { inject, Injectable } from '@angular/core';
+import { inject } from '@angular/core';
 import {
     HttpInterceptorFn
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { LoadingService } from '../services/loading.service';
 
