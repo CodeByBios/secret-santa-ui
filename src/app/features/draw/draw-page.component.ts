@@ -60,6 +60,7 @@ export class DrawPageComponent {
     this.status.set('Réinitialisation des tirages en cours...');
     try {
       await this.svc.reset();
+      this.assignments.set([]);
       this.status.set('Réinitialisation des tirages effectuée ✔️');
     } catch (e) {
       this.status.set((e as Error).message);
