@@ -107,6 +107,6 @@ export class ParticipantsPageComponent implements OnInit {
 
   async edit(id: string, data: Pick<Participant, 'fullName' | 'email' | 'giftIdea'>): Promise<void> {
     await this.svc.updateSingle(id, data);
-    this.status.set('Participant modifié.');
+    this.status.set('Participant modifié ✔️');
   }
 }
