@@ -17,21 +17,21 @@ import { ParticipantFormCoupleComponent } from './participant-form-couple.compon
         <button type="button" class="btn" (click)="openCouple()">Ajouter un couple</button>
       </div>
 
-        <div class="form-container" [class.visible]="addingSingle()" [class.hidden]="!addingSingle()">
-          @if (addingSingle()) {
+      <div class="form-container" [class.visible]="addingSingle()" [class.hidden]="!addingSingle()">
+        @if (addingSingle()) {
           <app-participant-form-single
             (submitted)="onSingleSubmitted($event)"
             (cancelled)="addingSingle.set(false)" />
-          }
-        </div>
+        }
+      </div>
       
-        <div class="form-container" [class.visible]="addingCouple()" [class.hidden]="!addingCouple()">
-          @if (addingCouple()) {
+      <div class="form-container" [class.visible]="addingCouple()" [class.hidden]="!addingCouple()">
+        @if (addingCouple()) {
           <app-participant-form-couple
             (submitted)="onCoupleSubmitted($event)"
             (cancelled)="addingCouple.set(false)" />
-          }
-        </div>
+         }
+      </div>
 
       @if(status()) {
         <div class="status" aria-live="polite">{{status()}}</div>

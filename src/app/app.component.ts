@@ -2,6 +2,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppHeaderComponent } from './shared/ui/app-header.component';
+import { Loader } from './features/loader/loader';
 
 interface Flake {
   id: number;
@@ -14,9 +15,10 @@ interface Flake {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppHeaderComponent],
+  imports: [RouterOutlet, AppHeaderComponent, Loader],
   template: `
     <app-header />
+    <app-loader></app-loader>
     <main class="container" role="main">
         <div class="snow" aria-hidden="true">
           @for (flake of flakes(); track flake.id) {
