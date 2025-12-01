@@ -36,7 +36,7 @@ import { DrawService } from '../../core/services/draw.service';
     .btn { padding:.375rem .625rem; border:1px solid #0a66c2; color:#0a66c2; background:#fff; border-radius:.375rem; }
     .btn.primary { background:#0a66c2; color:#fff; }
     .status { margin-top:.5rem; color:#333; }
-    .table { width:100%; border-collapse:collapse; margin-top:.75rem; }
+    .table { width:100%; border-collapse:collapse; margin-top:1.2rem; }
     th, td { border:1px solid #ddd; padding:.5rem; text-align:left; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
