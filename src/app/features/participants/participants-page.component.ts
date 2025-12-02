@@ -37,7 +37,7 @@ import { ParticipantFormCoupleComponent } from './participant-form-couple.compon
         <div class="status" aria-live="polite">{{status()}}</div>
       }
 
-      <ul class="tags mt-3" role="list">
+      <ul class="tags mt-2" role="list">
         @for (p of participants(); track p.id) {
           <li role="listitem">
             <app-participant-tag

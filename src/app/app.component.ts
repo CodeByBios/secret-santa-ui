@@ -32,9 +32,17 @@ interface Flake {
         </div>
       <router-outlet />
     </main>
+    <footer class="footer">
+      <div class="footer-left">
+        © 2025 Secret Santa
+      </div>
+      <div class="footer-right">
+        Konoha - Joyeuses fêtes 🎄
+      </div>
+    </footer>
   `,
   styles: [`
-    .container { margin: 0 auto; padding: 1rem; };
+    .container { margin: 0 auto; padding: 1rem; min-height: calc(100vh - 62px - 39px);};
     .snow {
     position: fixed;
     inset: 0;
@@ -68,6 +76,25 @@ interface Flake {
         50% {
             transform: translateX(15px);
         }
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between; /* Texte à gauche et à droite */
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #c0392b;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #fff;
+      font-weight: bold
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-right {
+      text-align: right;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
