@@ -18,7 +18,7 @@ import { RouterLink } from '@angular/router';
           <nav aria-label="Navigation principale">
             <a routerLink="/" class="nav__link">Participants</a>
             <a routerLink="/draw" class="nav__link">Tirage</a>
-            <a routerLink="/emails" class="nav__link">Envoyer les emails</a>
+            <!-- <a routerLink="/emails" class="nav__link">Envoyer les emails</a> -->
           </nav>
         </div>
       </nav>
